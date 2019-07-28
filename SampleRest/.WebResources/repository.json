@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/samplerest.Process-empResource.json",
+        "type": "generated"
+    }]
+}

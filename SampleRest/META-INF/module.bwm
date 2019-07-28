@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_UFNt8EyPEemkUc38OyhQhA" targetNamespace="http://tns.tibco.com/bw/composite/SampleRest" name="SampleRest" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_1zNSkEyPEemkUc38OyhQhA" name="empresource" promote="ComponentProcess/empresource">
+    <sca:interface.wsdl xmi:id="_12oaAEyPEemkUc38OyhQhA" interface="http://xmlns.example.com/20190322161459PLT#wsdl.interface(empresource)" scaext:wsdlLocation="../Processes/samplerest/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_13-d0EyPEemkUc38OyhQhA" name="RestService" path="/empresource/{empId}" docBasePath="http://localhost:7777/SampleRest" docResourcePath="empResource" basePath="/" connector="samplerest.empResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/samplerest.Process-empResource.json">
+      <operation xmi:id="_14HnwUyPEemkUc38OyhQhA" operationName="get" nickname="get-empresource" httpMethod="GET" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_17GqUEyPEemkUc38OyhQhA">
+        <parameterMapping xmi:id="_17GqUUyPEemkUc38OyhQhA" parameterName="empId" parameterType="Path" required="true"/>
+      </parameters>
+      <advancedConfig xmi:id="_14HnwEyPEemkUc38OyhQhA" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_14HnwkyPEemkUc38OyhQhA" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_lgRPkEyPEemkUc38OyhQhA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_liDYQEyPEemkUc38OyhQhA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_liNJQEyPEemkUc38OyhQhA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_liNJQUyPEemkUc38OyhQhA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_liNJQkyPEemkUc38OyhQhA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_liWTMEyPEemkUc38OyhQhA" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_liWTMUyPEemkUc38OyhQhA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_kAmMkEyPEemkUc38OyhQhA" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_kAmMkUyPEemkUc38OyhQhA" processName="samplerest.Process"/>
+    <sca:service xmi:id="_1zDhkEyPEemkUc38OyhQhA" name="empresource">
+      <sca:interface.wsdl xmi:id="_1zDhkUyPEemkUc38OyhQhA" interface="http://xmlns.example.com/20190322161459PLT#wsdl.interface(empresource)" scaext:wsdlLocation="../Processes/samplerest/Process.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
