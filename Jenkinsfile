@@ -3,6 +3,7 @@ pipeline{
 			registry = "subugirish/docker-test"
 			registryCredential = 'dockerhub'
 			dockerImage = ''
+		
 			}
 	agent any
 	stages{
