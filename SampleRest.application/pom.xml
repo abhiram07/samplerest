@@ -12,11 +12,9 @@
   <packaging>bwear</packaging>
   <properties>
     <skipTests>false</skipTests>
-    <bw.Home>C:\TibcoBWCE245</bw.Home>
     <project.type>Docker</project.type>
     <failIfNoTests>false</failIfNoTests>
     <docker.property.file>docker-dev.properties</docker.property.file>
-    <tibco.Home>C:\TibcoBWCE245</tibco.Home>
   </properties>
   <build>
     <plugins>
